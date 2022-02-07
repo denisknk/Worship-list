@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Worship-list/home/static/css/main.f42229e8.css",
-    "main.js": "/Worship-list/home/static/js/main.3cb8f936.js",
-    "static/js/377.68a1daa1.chunk.js": "/Worship-list/home/static/js/377.68a1daa1.chunk.js",
-    "service-worker.js": "/Worship-list/home/service-worker.js",
-    "index.html": "/Worship-list/home/index.html",
-    "main.f42229e8.css.map": "/Worship-list/home/static/css/main.f42229e8.css.map",
-    "main.3cb8f936.js.map": "/Worship-list/home/static/js/main.3cb8f936.js.map",
-    "377.68a1daa1.chunk.js.map": "/Worship-list/home/static/js/377.68a1daa1.chunk.js.map"
+    "main.css": "/Worship-list/static/css/main.f42229e8.css",
+    "main.js": "/Worship-list/static/js/main.1fba0200.js",
+    "static/js/377.68a1daa1.chunk.js": "/Worship-list/static/js/377.68a1daa1.chunk.js",
+    "service-worker.js": "/Worship-list/service-worker.js",
+    "index.html": "/Worship-list/index.html",
+    "main.f42229e8.css.map": "/Worship-list/static/css/main.f42229e8.css.map",
+    "main.1fba0200.js.map": "/Worship-list/static/js/main.1fba0200.js.map",
+    "377.68a1daa1.chunk.js.map": "/Worship-list/static/js/377.68a1daa1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f42229e8.css",
-    "static/js/main.3cb8f936.js"
+    "static/js/main.1fba0200.js"
   ]
 }
