@@ -1,0 +1,52 @@
+.header {
+  color: #82888a;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 0 5px;
+}
+
+.listWrapper {
+}
+
+.list {
+  border-top: 1px solid #5e5e5e;
+  padding: 0;
+  margin: 24px 0 0 0;
+}
+
+.rowWrapper {
+  list-style-type: none;
+  border-bottom: 1px solid #5e5e5e;
+  display: flex;
+  min-height: 70px;
+  padding: 0 8px;
+  color: #9d9986;
+}
+
+.imgParent {
+  margin-right: 15px;
+  position: relative;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  border-radius: 3px;
+  display: inline-block;
+  filter: brightness(0.8);
+  height: 45px;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 45px;
+  object-fit: fill;
+}
+
+.songName {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
