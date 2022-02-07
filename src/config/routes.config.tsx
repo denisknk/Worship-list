@@ -7,8 +7,8 @@ import NotFoundPage from '../pages/404';
 export const RouteSetup: React.FC = () => {
   return (
     <Routes>
-      <Route path="*" element={<NotFoundPage />} />
       <Route path="/" element={<HomePage />} />
+      {/*<Route path="*" element={<NotFoundPage />} />*/}
     </Routes>
   );
 };
