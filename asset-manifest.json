@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Worship-list/static/css/main.f42229e8.css",
-    "main.js": "/Worship-list/static/js/main.e1811b84.js",
+    "main.js": "/Worship-list/static/js/main.5172c20b.js",
     "static/js/377.68a1daa1.chunk.js": "/Worship-list/static/js/377.68a1daa1.chunk.js",
     "service-worker.js": "/Worship-list/service-worker.js",
     "index.html": "/Worship-list/index.html",
     "main.f42229e8.css.map": "/Worship-list/static/css/main.f42229e8.css.map",
-    "main.e1811b84.js.map": "/Worship-list/static/js/main.e1811b84.js.map",
+    "main.5172c20b.js.map": "/Worship-list/static/js/main.5172c20b.js.map",
     "377.68a1daa1.chunk.js.map": "/Worship-list/static/js/377.68a1daa1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f42229e8.css",
-    "static/js/main.e1811b84.js"
+    "static/js/main.5172c20b.js"
   ]
 }
