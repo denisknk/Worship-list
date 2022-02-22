@@ -6,7 +6,7 @@ import RowItem from './components/rowItem';
 import Modal from '../../components/modal/modal';
 
 import styles from './home.module.css';
-import { ReactComponent as Logo } from '../../assets/images/main_logo.svg';
+import logo from '../../assets/images/main_logo.png';
 
 type SongType = {
   complete: boolean;
@@ -102,7 +102,7 @@ const Home: React.FC = () => {
   return (
     <Container>
       <div className={styles.logoWrapper}>
-        <Logo />
+        <img src={logo} alt="logo" className={styles.mainLogo} />
       </div>
       <input
         className={`${styles.input} ${styles.searchInput}`}
