@@ -6,14 +6,14 @@ import RowItem from './components/rowItem';
 import Modal from '../../components/modal/modal';
 
 import styles from './home.module.css';
-import logoImg from '../../assets/images/main_logo.png';
+import { ReactComponent as Logo } from '../../assets/images/main_logo.svg';
 
 type SongType = {
   complete: boolean;
   band: string;
   songName: string;
   timestamp: string;
-  _id: string;
+  id: string;
 };
 
 const Home: React.FC = () => {
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
   const [searchInput, setSearchInput] = useState('');
   const [deleteId, setDeleteId] = useState('');
 
-  const GetSongs = () => {
+  const getSongs = () => {
     Axios.get('/song', {
       params: {
         search: searchInput
@@ -45,7 +45,8 @@ const Home: React.FC = () => {
       songName: songNameInput
     })
       .then(async (res) => {
-        setSongs([...songs, res.data]);
+        getSongs();
+        // setSongs([...songs, res.data]);
       })
       .catch((error) => {
         alert(`Ошибка добавления \n${error}`);
@@ -58,12 +59,14 @@ const Home: React.FC = () => {
     setDeleteId('');
   };
 
-  const deleteSong = async () => {
-    Axios.delete(`/song/${deleteId}`)
-      .then(async (res) => {
-        setSongs((songs) => songs.filter((s) => s._id !== res.data.result._id));
+  const deleteSong = async (id: string) => {
+    console.log('delete Id in Axios', id);
+    Axios.delete(`/song/${id}`)
+      .then(async () => {
+        setSongs((songs) => songs.filter((s) => s.id !== id));
       })
       .catch((error) => {
+        console.log('before alert id', id);
         alert(`Ошибка удаления ${error}`);
       });
     setDeleteModalIsOpen(false);
@@ -75,7 +78,7 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    GetSongs();
+    getSongs();
   }, [searchInput]);
 
   const handleCloseAddModal = () => {
@@ -99,7 +102,7 @@ const Home: React.FC = () => {
   return (
     <Container>
       <div className={styles.logoWrapper}>
-        <img className={styles.mainLogo} src={logoImg} alt="logo" />
+        <Logo />
       </div>
       <input
         className={`${styles.input} ${styles.searchInput}`}
@@ -112,15 +115,16 @@ const Home: React.FC = () => {
       />
       <div className={styles.listWrapper}>
         <ul className={styles.list}>
-          {songs.map((t, i) => (
-            <RowItem
-              key={i}
-              band={t.band}
-              songName={t.songName}
-              id={t._id}
-              onDelete={handleDeleteSong}
-            />
-          ))}
+          {songs &&
+            songs.map((t, i) => (
+              <RowItem
+                key={i}
+                band={t.band}
+                songName={t.songName}
+                id={t.id}
+                onDelete={handleDeleteSong}
+              />
+            ))}
         </ul>
       </div>
       <Modal isOpen={addModalIsOpen} setClose={handleCloseAddModal}>
@@ -165,7 +169,7 @@ const Home: React.FC = () => {
           </button>
           <button
             className={`${styles.modalButton} ${styles.modalButtonDelete}`}
-            onClick={deleteSong}>
+            onClick={() => deleteSong(deleteId)}>
             Удалить
           </button>
         </div>

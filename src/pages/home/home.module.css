@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
+    width: 90px;
+    padding-left: 20px;
 }
 
 .mainLogo {
